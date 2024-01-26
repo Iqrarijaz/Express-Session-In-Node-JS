@@ -28,7 +28,7 @@ jobs:
       run:  pm2 list
 
     - name: Restart the Node.js application with PM2
-      run:  pm2 restart node
+      run:  run: pm2 start /var/www/html/Express-Session-In-Node-JS/index.js --name node-app
 
     - name: Show PM2 process list
       run:  pm2 list
