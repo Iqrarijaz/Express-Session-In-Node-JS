@@ -22,12 +22,12 @@ jobs:
       run: npm install
 
     - name: Install PM2 globally
-      run: npm install -g pm2
+      run:  npm install -g pm2
 
     - name: Restart the Node.js application with PM2
-      run:  sudo pm2 restart node
+      run:  pm2 restart node
 
     - name: Show PM2 process list
-      run:  sudo pm2 list
+      run:  pm2 list
 
     # Add additional steps as needed, such as database migrations, etc.
