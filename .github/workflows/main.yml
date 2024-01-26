@@ -27,12 +27,15 @@ jobs:
     - name: Print Current Directory
       run: |
         pwd
-        
+
     - name: Show PM2 process list
       run:  pm2 list
 
+    - name: List contents of the directory
+      run: ls /var/www/html/Express-Session-In-Node-JS/
+
     - name: Restart the Node.js application with PM2
-      run:  pm2 start /var/www/html/Express-Session-In-Node-JS/index.js --name node-app
+      run:  pm2 start index.js --name node-app
 
     - name: Show PM2 process list
       run:  pm2 list
