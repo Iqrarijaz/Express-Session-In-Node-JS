@@ -22,7 +22,9 @@ app.use(
 );
 
 app.get("/", handleRequest, (req, res) => {
-  res.send(`You have requested this page  ${req.session.counter} times`);
+  res.send(
+    `You have requested this page  ${req.session.counter} times, you can refresh the page by clicking`
+  );
 });
 
 app.post("/data", handleRequest, (req, res) => {
