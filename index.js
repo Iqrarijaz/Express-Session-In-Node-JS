@@ -4,7 +4,7 @@ const logger = require("morgan");
 const bodyParser = require("body-parser");
 const { handleRequest } = require("./middleware");
 const app = express();
-const port = 3000;
+const port = 3001;
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(
