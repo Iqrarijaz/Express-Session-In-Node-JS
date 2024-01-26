@@ -10,35 +10,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '21.4.0'
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '21.4.0'
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Install PM2 globally
-      run:  npm install -g pm2
+      - name: Install PM2 globally
+        run: npm install -g pm2
 
-    - name: Print Current Directory
-      run: |
-        pwd
+      - name: Print Current Directory
+        run: |
+          pwd
 
-     - name: List current directory contents
-      run: |
-        ls
+      - name: List current directory contents
+        run: |
+          ls
 
-    - name: Show PM2 process list
-      run:  pm2 list
+      - name: Show PM2 process list
+        run: pm2 list
 
-    - name: Restart the Node.js application with PM2
-      run:  pm2 start index.js --name node-app
+      - name: Restart the Node.js application with PM2
+        run: pm2 start index.js --name node-app
 
-    - name: Show PM2 process list
-      run:  pm2 list
+      - name: Show PM2 process list
+        run: pm2 list
 
     # Add additional steps as needed, such as database migrations, etc.
