@@ -23,7 +23,11 @@ jobs:
 
     - name: Install PM2 globally
       run:  npm install -g pm2
-     
+
+    - name: Print Current Directory
+      run: |
+        pwd
+        
     - name: Show PM2 process list
       run:  pm2 list
 
