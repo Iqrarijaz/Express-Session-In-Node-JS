@@ -15,11 +15,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
 
+      - name: Print working directory
+        run: pwd
+
       - name: Install PM2
         run: npm install pm2@latest -g
-
-      - name: Check PM2 version
-        run: pm2 -V
 
       - name: List PM2 processes
         run: pm2 list
