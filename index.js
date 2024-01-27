@@ -30,6 +30,7 @@ app.get("/", handleRequest, (req, res) => {
 app.post("/data", handleRequest, (req, res) => {
   if (!req.session.data) {
     req.session.data = [];
+    
   }
   req.session.data.push(req.body);
   res.send(req.session.data);
