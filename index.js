@@ -23,7 +23,7 @@ app.use(
 
 app.get("/", handleRequest, (req, res) => {
   res.send(
-    `You have requested this page  ${req.session.counter} times, you can refresh the page by clicking`
+    `You have requested this page  ${req.session.counter} times,you can refresh the page by clicking`
   );
 });
 
