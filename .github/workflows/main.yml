@@ -9,6 +9,14 @@ jobs:
   pm2-configuration:
     runs-on: ubuntu-latest
     steps:
+      - name: Change to workspace directory
+        run: cd $GITHUB_WORKSPACE
+
+      - name: Print final working directory
+        run: |
+          pwd
+          ls
+
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -27,4 +35,4 @@ jobs:
       - name: Start Node.js application with PM2
         run: |
           cd $GITHUB_WORKSPACE  # Go to the workspace directory
-          pm2 start index.js 
+          pm2 start index.js
