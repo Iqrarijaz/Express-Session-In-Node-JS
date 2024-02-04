@@ -7,7 +7,7 @@ on:
 
 jobs:
   pm2-configuration:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Change to workspace directory
         run: cd $GITHUB_WORKSPACE
